@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "GITHUB_PAGES=true next build && GITHUB_PAGES=true next export -o out",
+    "build": "next build",
+    "export": "next export -o out",
     "preview": "next start",
-    "lint": "eslint",
-    "export": "GITHUB_PAGES=true next export -o out"
+    "lint": "eslint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.8",
