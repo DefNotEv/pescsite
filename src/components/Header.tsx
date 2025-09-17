@@ -161,6 +161,8 @@ export default function Header() {
                   <a
                     key={social.name}
                     href={social.href}
+                    target={social.target || '_self'}
+                    rel={social.rel || 'noopener noreferrer'}
                     className="text-black hover:text-[var(--brand)] hover:bg-gray-100 p-2 rounded-lg transition-all duration-200"
                     aria-label={social.name}
                   >
