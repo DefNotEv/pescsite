@@ -15,9 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Purdue Engineering Student Council (PESC)",
+  title: "Purdue Engineering Student Council",
   description:
     "Serving Students, Serving Industry, Serving the Community. Purdue Engineering Student Council official site.",
+  icons: {
+    icon: "/logogold.png",
+    apple: "/logogold.png",
+  },
 };
 
 export default function RootLayout({
