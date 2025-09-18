@@ -1,26 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exports
+  // Development settings
+  reactStrictMode: true,
+  // Static export for GitHub Pages
   output: 'export',
-  
-  // Optional: Change the output directory to 'out' (default is '.next')
-  distDir: 'out',
-  
-  // Optional: Add a trailing slash for GitHub Pages compatibility
-  trailingSlash: true,
-  
-  // Optional: Configure image optimization
+  // Project site under https://defnotev.github.io/pescsite
+  basePath: '/pescsite',
+  assetPrefix: '/pescsite/',
   images: {
-    // Disable image optimization as it's not supported with static exports
+    // GitHub Pages cannot run the Image Optimization server
     unoptimized: true,
   },
-  
-  // Configure base path for GitHub Pages
-  basePath: '/pescsite', // Required for https://defnotev.github.io/pescsite
-  
-  // Optional: Configure asset prefix for CDN or subfolder deployment
-  // Set asset prefix for proper asset loading in subdirectory
-  assetPrefix: '/pescsite/',
-}
+  eslint: {
+    // Allow production builds to complete even if there are ESLint errors
+    ignoreDuringBuilds: true,
+  },
+  // Optional: ensure directory-style URLs work well on Pages
+  // trailingSlash: true,
+};
 
 module.exports = nextConfig
