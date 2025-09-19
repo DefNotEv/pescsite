@@ -6,6 +6,7 @@ import CommitteeModal from "@/components/CommitteeModal";
 import MemberCard from "@/components/MemberCard";
 import { members } from "@/data/members";
 import { getImagePath } from "@/utils/images";
+import { Analytics } from "@vercel/analytics/next"
 
 const COMMITTEES = [
   {
