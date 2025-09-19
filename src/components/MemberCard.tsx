@@ -18,6 +18,14 @@ export default function MemberCard({ member }: MemberCardProps) {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={false}
+          loading="eager"
+          onError={(e) => {
+            // Fallback in case the image fails to load
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = '/placeholder-member.jpg'; // Make sure to add a placeholder image
+          }}
         />
       </div>
       <div className="p-4">
