@@ -1,10 +1,13 @@
-// Utility function to handle basePath for images in static export
+// Utility function to handle basePath for images in all environments
 export function getImagePath(path: string): string {
-  // In development, no basePath prefix needed
-  if (process.env.NODE_ENV === 'development') {
-    return path;
+  // Remove leading slash if present to avoid double slashes
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  
+  // In development or Vercel, no basePath prefix needed
+  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL) {
+    return `/${cleanPath}`;
   }
   
-  // In production, prefix with basePath
-  return `/pescsite${path}`;
+  // In GitHub Pages production, prefix with basePath
+  return `/pescsite/${cleanPath}`;
 }
