@@ -19,8 +19,13 @@ export const metadata: Metadata = {
   description:
     "Serving Students, Serving Industry, Serving the Community. Purdue Engineering Student Council official site.",
   icons: {
-    icon: "/logogold.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logogold.png", sizes: "any", type: "image/png" }
+    ],
     apple: "/logogold.png",
+    shortcut: "/logo.png",
   },
 };
 

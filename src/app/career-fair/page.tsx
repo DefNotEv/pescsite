@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import { getImagePath } from "@/utils/images";
 
 export default function CareerFairPage() {
   const scrollToSection = (sectionId: string) => {
@@ -12,7 +13,7 @@ export default function CareerFairPage() {
       {/* Hero Section */}
       <section className="relative min-h-screen">
         <Image
-          src="/career-fair-hero.jpg"
+          src={getImagePath("/hero.jpg")}
           alt="Career Fair"
           fill
           priority

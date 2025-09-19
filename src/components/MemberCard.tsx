@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { Member } from '@/data/members';
+import { getImagePath } from '@/utils/images';
 
 interface MemberCardProps {
   member: Member;
@@ -12,7 +13,7 @@ export default function MemberCard({ member }: MemberCardProps) {
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:shadow-lg hover:-translate-y-1">
       <div className="relative h-48 w-full bg-gray-100">
         <Image
-          src={member.image}
+          src={getImagePath(member.image)}
           alt={member.name}
           fill
           className="object-cover"

@@ -5,61 +5,62 @@ import Image from "next/image";
 import CommitteeModal from "@/components/CommitteeModal";
 import MemberCard from "@/components/MemberCard";
 import { members } from "@/data/members";
+import { getImagePath } from "@/utils/images";
 
 const COMMITTEES = [
   {
     name: "Industrial Roundtable",
     description: "Organizes the largest student-run career fair in the nation, connecting students with top engineering companies.",
     email: "ir@purdue.edu",
-    image: "/com.jpg"
+    image: getImagePath("/com.jpg")
   },
   {
     name: "Expo",
     description: "Showcases student projects and research to industry professionals and the Purdue community.",
     email: "expo@purdue.edu",
-    image: "/hero.jpg"
+    image: getImagePath("/hero.jpg")
   },
   {
     name: "Campus Relations",
     description: "Fosters relationships between PESC and other student organizations across campus.",
     email: "campusrel@purdue.edu",
-    image: "/howtojoin.jpg"
+    image: getImagePath("/howtojoin.jpg")
   },
   {
     name: "Engineering Outreach",
     description: "Engages with the local community to promote engineering education and opportunities.",
     email: "outreach@purdue.edu",
-    image: "/com.jpg"
+    image: getImagePath("/com.jpg")
   },
   {
     name: "Wellbeing",
     description: "Promotes mental and physical health initiatives for engineering students.",
     email: "wellbeing@purdue.edu",
-    image: "/hero.jpg"
+    image: getImagePath("/hero.jpg")
   },
   {
     name: "Communications",
     description: "Manages PESC's digital presence and internal communications.",
     email: "comms@purdue.edu",
-    image: "/howtojoin.jpg"
+    image: getImagePath("/howtojoin.jpg")
   },
   {
     name: "Internal Development",
     description: "Focuses on professional development and team building within PESC.",
     email: "internal@purdue.edu",
-    image: "/com.jpg"
+    image: getImagePath("/com.jpg")
   },
   {
     name: "Purdue in Indianapolis",
     description: "Coordinates initiatives and opportunities for engineering students at the Indianapolis campus.",
     email: "indy@purdue.edu",
-    image: "/hero.jpg"
+    image: getImagePath("/hero.jpg")
   },
   {
     name: "Alumni Relations",
     description: "Maintains connections with PESC alumni and organizes networking events.",
     email: "alumni@purdue.edu",
-    image: "/howtojoin.jpg"
+    image: getImagePath("/howtojoin.jpg")
   }
 ];
 
@@ -86,7 +87,7 @@ export default function AboutPage() {
       {/* Hero (image) */}
       <section className="relative min-h-screen">
         <Image
-          src="/abouthero.jpg"
+          src={getImagePath("/abouthero.jpg")}
           alt="About PESC hero"
           fill
           priority
@@ -104,7 +105,7 @@ export default function AboutPage() {
                 className="group relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm ring-1 ring-white/10 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <Image
-                  src="/com.jpg"
+                  src={getImagePath("/com.jpg")}
                   alt="Committees"
                   width={400}
                   height={200}
@@ -121,7 +122,7 @@ export default function AboutPage() {
                 className="group relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm ring-1 ring-white/10 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <Image
-                  src="/hero.jpg"
+                  src={getImagePath("/hero.jpg")}
                   alt="Members"
                   width={400}
                   height={200}
@@ -138,7 +139,7 @@ export default function AboutPage() {
                 className="group relative overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm ring-1 ring-white/10 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <Image
-                  src="/howtojoin.jpg"
+                  src={getImagePath("/howtojoin.jpg")}
                   alt="How to Join"
                   width={400}
                   height={200}
@@ -256,7 +257,7 @@ export default function AboutPage() {
             {/* Right side - Image */}
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/howtojoin.jpg"
+                src={getImagePath("/howtojoin.jpg")}
                 alt="Students collaborating in PESC"
                 fill
                 className="object-cover"
@@ -331,7 +332,7 @@ export default function AboutPage() {
                   <div key={member.id} className="text-center">
                     <div className="w-20 h-20 mx-auto mb-2 rounded-full bg-gray-200 overflow-hidden">
                       <Image
-                        src={member.image}
+                        src={getImagePath(member.image)}
                         alt={member.name}
                         width={80}
                         height={80}

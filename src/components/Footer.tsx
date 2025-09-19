@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/utils/images";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -21,7 +22,7 @@ export default function Footer() {
           </div>
           {/* Center - Logo */}
           <div className="flex justify-center">
-            <Image src="/logogold.png" alt="PESC Logo (Gold)" width={56} height={56} className="h-14 w-auto" />
+            <Image src={getImagePath("/logogold.png")} alt="PESC Logo (Gold)" width={56} height={56} className="h-14 w-auto" />
           </div>
 
           {/* Right - Contact and Social */}

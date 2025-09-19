@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/utils/images";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <Image
-          src="/hero.jpg"
+          src={getImagePath("/hero.jpg")}
           alt="Purdue Engineering community"
           fill
           priority
@@ -88,7 +89,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-8 items-center">
               <div className="flex justify-center md:justify-start">
                 <Image
-                  src="/emma.jpg"
+                  src={getImagePath("/emma.jpg")}
                   alt="Portrait of Emma Kessinger, PESC President"
                   width={96}
                   height={96}
