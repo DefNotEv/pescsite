@@ -20,13 +20,14 @@ export const metadata: Metadata = {
     "Serving Students, Serving Industry, Serving the Community. Purdue Engineering Student Council official site.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logogold.png", sizes: "any", type: "image/png" }
+      { url: "favicon.ico", sizes: "any" },
+      { url: "logo.png", sizes: "32x32", type: "image/png" },
+      { url: "logogold.png", sizes: "any", type: "image/png" }
     ],
-    apple: "/logogold.png",
-    shortcut: "/logo.png",
+    apple: "logogold.png",
+    shortcut: "logo.png",
   },
+  metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
 };
 
 export default function RootLayout({
